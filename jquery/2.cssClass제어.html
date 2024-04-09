@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>cssClass제어 연습 - 1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+		* {margin: 0;padding: 0;list-style: none;}
+		ul {width: 500px;margin: 20px auto;}
+		li {
+			float: left;margin: 10px 5px;
+			width: 15px;height: 15px;cursor:pointer;
+			background: silver;border-radius:8px
+		}
+		.on {background: green;}
+	</style>
+	<script>
+	$(function() {
+		$('li').click(function() {
+			//$('li').removeClass('on')
+			$('li').not(this).removeClass('on')
+			$(this).addClass('on');
+		})
+	})
+	</script>
+</head>
+<body>
+	<ul>
+		<li class="on"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

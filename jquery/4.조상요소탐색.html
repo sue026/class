@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ancestors(조상) 요소 탐색</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// parent() : 직접 부모요소 탐색
+			// parents() : 모든 조상요소 탐색 (<html> 태그까지 찾아냄)
+			// parents('ul') : 조상 요소 중 'ul' 요소만 탐색
+			// parentsUntil('ul') : 조상 요소 ul 요소까지 탐색, ul 요소는 제외
+			$('.btn1').click(function() {
+				$('span').parent().css('background','pink')
+			})
+			$('.btn2').click(function() {
+				$('span').parents().css('border','1px dashed red');
+			})
+			$('.btn3').click(function() {
+				$('span').parents('ul').css('border','1px solid green');
+			})
+			$('.btn4').click(function() {
+				$('span').parentsUntil('ul').css('border','3px double gold')
+			})
+		});//ready()
+	</script>
+	<style>
+		#wrap {margin: 20px;}
+		ul {margin: 20px;}
+		li {margin: 20px;padding: 20px;}
+	</style>
+</head>
+<body>
+	<button class="btn1">parent()</button>
+	<button class="btn2">parents()</button>
+	<button class="btn3">parents('ul')</button>
+	<button class="btn4">parentsUntil()</button>
+	<hr>
+	<div id="wrap">
+		<ul>
+			<li><a href="#"><span>parent() : 직접 부모요소 탐색</span></a></li>
+			<li><a href="#"><span>parents() : 모든 조상요소 탐색 (<html> 태그까지 찾아냄)</span></a></li>
+			<li><a href="#"><span>patentsUntil('ul') : 조상 요소 ul 요소까지 탐색, ul 요소는 제외, ()안에 요소명 생략 불가</span></a></li>
+		</ul>
+	</div>
+</body>
+</html>

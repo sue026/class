@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>크기 제어</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+	.box1 {
+		width: 300px;height: 300px;
+		border: 10px solid blue;
+		margin: 20px;padding: 50px;
+		background: pink;
+	}
+	.box2 {
+		width: 500px;height: 200px;
+		border: 20px solid green;
+		margin: 50px;padding: 10px;
+		background: gold;
+	}
+	.box3 {
+		width: 350px;height: 350px;
+		border: 1px solid red;
+		margin: 60px;padding: 25px;
+		background: lightblue;
+	}
+	</style>
+	<script>
+	$(function() {
+		// width() : 컨텐츠 영역
+		// innerWidth() : padding을 포함하는 크기
+		// outerWidth() : border까지 포함하는 크기
+		// outerWidth(true) : 전체크기(margin까지 포함하는 크기)
+		var b1w = $('.box1').width();
+		var b1iw = $('.box1').innerWidth();
+		var b1ow = $('.box1').outerWidth();
+		var b1tw = $('.box1').outerWidth(true);
+		var b1h = $('.box1').height();
+		var b1ih = $('.box1').innerHeight();
+		var b1oh = $('.box1').outerHeight();
+		var b1th = $('.box1').outerHeight(true);
+		$('.box1').html(
+			'전체 너비 : ' + b1tw + 'px<br>' + 
+			'컨텐츠 너비 : ' + b1w + 'px<br>' +
+			'padding포함 너비 : ' + b1iw + 'px<br>' +
+			'border포함 너비 : ' + b1ow + 'px<hr> ' +
+			'전체 높이 : ' + b1th + 'px<br>' + 
+			'컨텐츠 높이 : ' + b1h + 'px<br>' +
+			'padding포함 높이 : ' + b1ih + 'px<br>' +
+			'border포함 높이 : ' + b1oh + 'px<br> '
+		)	
+		
+		var b2w = $('.box2').width();
+		var b2iw = $('.box2').innerWidth();
+		var b2ow = $('.box2').outerWidth();
+		var b2tw = $('.box2').outerWidth(true);
+		var b2h = $('.box2').height();
+		var b2ih = $('.box2').innerHeight();
+		var b2oh = $('.box2').outerHeight();
+		var b2th = $('.box2').outerHeight(true);
+		$('.box2').html(
+			'전체 너비 : ' + b2tw + 'px<br>' + 
+			'컨텐츠 너비 : ' + b2w + 'px<br>' +
+			'padding포함 너비 : ' + b2iw + 'px<br>' +
+			'border포함 너비 : ' + b2ow + 'px<hr> ' +
+			'전체 높이 : ' + b2th + 'px<br>' + 
+			'컨텐츠 높이 : ' + b2h + 'px<br>' +
+			'padding포함 높이 : ' + b2ih + 'px<br>' +
+			'border포함 높이 : ' + b2oh + 'px<br> '
+		);
+
+		var b3w = $('.box3').width();
+		var b3iw = $('.box3').innerWidth();
+		var b3ow = $('.box3').outerWidth();
+		var b3tw = $('.box3').outerWidth(true);
+		var b3h = $('.box3').height();
+		var b3ih = $('.box3').innerHeight();
+		var b3oh = $('.box3').outerHeight();
+		var b3th = $('.box3').outerHeight(true);
+		$('.box3').html(
+			'전체 너비 : ' + b3tw + 'px<br>' + 
+			'컨텐츠 너비 : ' + b3w + 'px<br>' +
+			'padding포함 너비 : ' + b3iw + 'px<br>' +
+			'border포함 너비 : ' + b3ow + 'px<hr> ' +
+			'전체 높이 : ' + b3th + 'px<br>' + 
+			'컨텐츠 높이 : ' + b3h + 'px<br>' +
+			'padding포함 높이 : ' + b3ih + 'px<br>' +
+			'border포함 높이 : ' + b3oh + 'px<br> '
+		)
+	})
+	</script>
+</head>
+<body>
+	<div class="box1">
+		* 전체크기 : 460 / 460 <br>
+		* 컨텐츠 : 300/300 <br>
+		* padding : 50 <br>	* border : 10 <br>
+		* margin : 20
+	</div>
+	<div class="box2">		
+		* 전체크기 : 660 / 360 <br>
+		* 컨텐츠 : 500/200 <br>
+		* padding : 10 <br>	* border : 20 <br>
+		* margin : 50	
+	</div>
+	<div class="box3">				
+		* 전체크기 : 522 / 522 <br>
+		* 컨텐츠 : 350/350 <br>
+		* padding : 25 <br>		* border : 1 <br>
+		* margin : 60
+	</div>
+</body>
+</html>
