@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 제어</title>
+  <style>
+    .style1 {color:magenta;font-size: 20px;font-family: '궁서';}
+    .style2 {background: silver}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('.btn1').click(function() {$('.ex1').css('background', 'gold')})
+      $('.btn2').click(function() {$('.ex2').css({'font-size' : 30})})
+      $('.btn3').click(function() {
+        $('.ex3').css({
+          'font-style' : 'italic',
+          'text-decoration' : 'underline',
+          'color' : 'tomato'
+        })
+      })
+
+      $('.btn4').click(function() {
+        $('h3').addClass('style1');
+      })
+      $('.btn5').click(function() {
+        $('.ex5').addClass('style1 style2');
+      })
+      $('.btn6').click(function() {
+        $('h1').removeClass('style1');
+      })
+      $('.btn7').click(function() {
+        $('.ex').toggleClass('style1')
+      })
+    })
+  </script>
+</head>
+<body>
+  <button class="btn1">배경색</button>
+  <p class="ex1">배경색을 원하는 색으로 적용</p>
+  <hr>
+  <button class="btn2">글자크기</button>
+  <p class="ex2">글자의 크기를 30px로 변경</p>
+  <hr>
+  <button class="btn3">글자 스타일</button>
+  <p class="ex3">기울기 글자, 밑줄추가, 글자색을 원하는 색으로 변경</p>
+  <hr>
+	<button class="btn4">클래스 추가</button>
+	<h3>클래스 추가</h3>
+  <hr>  
+	<button class="btn5">여러 클래스 적용</button>
+	<p class="ex5">여러 클래스 적용</p>
+  <hr>
+  <button class="btn6">클래스삭제</button>
+	<h1 class="style1">글자색, 글자크기, 글꼴 삭제</h1>
+	<h2 class="style1">글자색, 글자크기, 글꼴 삭제 안됨</h2>
+	<hr>
+	<button class="btn7">toggle</button>
+	<p class="ex">클래스 토글 (add와 remove를 번갈아 가면서)</p>
+</body>
+</html>
