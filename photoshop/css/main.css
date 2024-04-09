@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@font-face {
+  font-family: 'batuphat';
+  src: url(../fonts/BatuphatScript.otf);
+}
+
+* {list-style: none;margin: 0;padding: 0;}
+body {
+  font-family: "Pretendard Variable", Pretendard, 'NanumSquare', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;font-size: 18px;
+  background: #f3f3f3;
+}
+img {max-width: 100%;}
+a {color: inherit;text-decoration: none;}
+.container {width: 95%;margin: auto;display: flex;}
+header {background: #FFF;padding: 10px 0;position: fixed;top: 0;left: 0;right: 0;z-index: 900;border-bottom: 1px solid #CCC;box-shadow: 0 3px 3px rgba(0,0,0,0.05);}
+header h1 {font-family: batuphat;color: slateblue; line-height: 35px;margin-right: 50px;margin-top: 5px;}
+header .gnb1 {display: flex;align-items: center;}
+header .gnb1>li {position: relative;}
+
+header .gnb1>li>a>span {display: block;}
+header .gnb1>li>a>span:hover {border-bottom: 3px solid slateblue;color:slateblue}
+header .gnb1>li>a i {vertical-align: middle;}
+header .gnb1 ul {display: none;position: absolute;top: 35px;background: #FFF;border: 1px solid #CCC;padding: 20px;}
+header .gnb1 ul li {line-height: 1.7em;}
+
+.menu_list {
+  position: fixed;left: 0;top: 0;bottom: 0;border-right: 1px solid #ccc;
+  background: #ededed;
+  width: 200px;padding: 120px 30px;
+}
+.menu_list h2 {font-family: 'NanumSquare';font-weight: 800;margin-bottom: 20px;}
+.menu_list h2 i {font-size: 12px;display: inline-block;vertical-align: middle;}
+.menu_list li {line-height: 2em;cursor: pointer;}
+.menu_list li:hover {color: #777}
+.menu_list li:before {
+content: '⊙'; margin-right: 10px;}
+.main {
+  padding: 100px;margin-left: 260px;
+}
+.main .inner {
+  padding: 30px 70px;background: #FFF;border: 1px solid #CCC;width: 80%;
+}
+.main .category {font-style: italic;color: #999;margin-bottom: 20px;}
+.main h3 {font-size: 40px;margin-bottom: 30px;}
+.main h4 {font-size: 30px;line-height: 2em;margin-top: 20px;}
+.main .source {padding: 15px;border-bottom: 1px solid #dfdfdf;}
+.main .source i {color: #999}
+.main .end {width: 800px;}
+.main .desc h5 {line-height: 2em;font-size: 1.2em;}
+.main .desc p {padding:10px 0}
+.main .desc button {padding: 1px 6px;vertical-align: middle;background: #fefefe;border: 1px outset #CCC;border-radius: 3px;}
+.main .desc img {margin-bottom: 50px;}
