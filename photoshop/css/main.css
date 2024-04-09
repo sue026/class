@@ -39,7 +39,7 @@ header .gnb1 ul li {line-height: 1.7em;}
 .menu_list li:before {
 content: '⊙'; margin-right: 10px;}
 .main {
-  padding: 100px;margin-left: 260px;
+  padding: 100px 0;
 }
 .main .inner {
   padding: 30px 70px;background: #FFF;border: 1px solid #CCC;width: 80%;
@@ -53,4 +53,4 @@ content: '⊙'; margin-right: 10px;}
 .main .desc h5 {line-height: 2em;font-size: 1.2em;}
 .main .desc p {padding:10px 0}
 .main .desc button {padding: 1px 6px;vertical-align: middle;background: #fefefe;border: 1px outset #CCC;border-radius: 3px;}
-.main .desc img {margin-bottom: 50px;}
+.main .desc img {margin-bottom: 50px;width: 100%}
